@@ -195,13 +195,16 @@ def supervised_plots(file_path):
     plt.show()
 
 
-# to plot the semi supervised Fig 3.(a-c) insert the file path on your computer to the following function:
-# the plot function takes about 6-8 minutes from file to figure.
+# To plot the semi supervised Fig 3.(a-c) insert the file path on your computer to the following function:
+# The plot function takes about 6-8 minutes from file to figure for the cohorts in the provided .xlsx file
+# in which reference cohort size: m=100 and there are 100 test samples of each kind (GLV steady state and 
+# shuffled profiles).
 semi_supervised_plots('Insert The Path To The File From Your Computer')
 
 
-# to plot the supervised Fig 5.(a-d) insert the file path on your computer to the following function:
-# the plot function takes about 10-15 minutes from file to figure.
+# To plot the supervised Fig 5.(a-d) insert the file path on your computer to the following function:
+# The plot function takes about 10-15 minutes from file to figure for the cohorts in the provided .xlsx file
+# in which reference cohort size (in both models) is m=50 and there are 100 test samples of each kind (GLV model A and GLV model B).
 supervised_plots('Insert The Path To The File From Your Computer')
 
 
