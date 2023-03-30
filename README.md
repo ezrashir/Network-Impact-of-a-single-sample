@@ -7,7 +7,7 @@ The "NetworkImpactPlots.py" script contains two general function used for both s
 2) "create_net_intersected(mat, sig_p_val=1e-3)" - used to create a network from a given cohort ("mat") with a certain significance threshold (p-value threshold = sig_p_val).
 
 And two setup-specific functions, which takes a path of an .xlsx file  (on your computer) containing the relevant cohorts of samples. Each sheet in the file should 
-contain a cohort of m (or (m+1)) samples and n species where the samples are stores in the rows, suth that the cohort is of size m*n (or (m+1)*n). The sheets in the file which contans the cohort should have the respective name (mentioned below): 
+contain a cohort of m (or (m+1)) samples and n species where samples are stores as rows, suth that the cohort is of size m*n (or (m+1)*n). The sheets in the file which contains the cohort should have the respective name (mentioned below): 
 
 1) "semi_supervised_plots(file_path)" - plots the semi supervised Fig 3.(a-c).
   This function takes a path to an .xlsx file containing three sheets. Each sheet contains a cohort of samples (no headers) with the following names: 
