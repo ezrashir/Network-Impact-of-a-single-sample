@@ -201,7 +201,7 @@ semi_supervised_plots('Insert The Path To The File From Your Computer')
 
 
 # to plot the supervised Fig 5.(a-d) insert the file path on your computer to the following function:
-# the plot function takes about 9-10 minutes from file to figure.
+# the plot function takes about 10-15 minutes from file to figure.
 supervised_plots('Insert The Path To The File From Your Computer')
 
 
