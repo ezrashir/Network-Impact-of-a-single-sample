@@ -1,5 +1,12 @@
 # Network-Impact-of-a-single-sample
-Python functions for the calculation of the network impact parameters.
+Shir Ezra, Dr. Amir Bashan.
+
+
+In this paper, we developed both supervised classification and anomaly detection algorithms applied to numeric data from complex systems. Both algorithms were based on the statistical properties of networks generated from the data. We introduced three parameters, referred to as the 'Network impact' parameters, which were used to characterize these networks.
+
+
+In this repository, you can find both algorithms used to calculate the three network impact parameters for each setup, including the 'Semi-supervised' and 'Supervised' approaches."
+
 
 The "NetworkImpactPlots.py" script contains two general function used for both setups:
 
