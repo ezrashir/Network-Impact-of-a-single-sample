@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn import metrics
 
 
-def create_net_intersected(mat, sig_p_val=1e-3):
+def create_net_intersected(mat:np.array, sig_p_val:float=1e-3):
     mat_size = np.size(mat[0, :])
     network = np.zeros((mat_size, mat_size))
     for i in range(mat_size):
@@ -52,7 +52,7 @@ def Network_Impact_parameters_Calculate(reference_cohort, test_set):
     return DS, DW, theta
 
 
-def semi_supervised_plots(file_path):
+def semi_supervised_plots(file_path:str):
     reference_cohort = pd.read_excel(file_path, sheet_name='Reference cohort', header=None).to_numpy()
     GLV_SS_cohort = pd.read_excel(file_path, sheet_name='GLV Steady States cohort', header=None).to_numpy()
     shuffled_cohort = pd.read_excel(file_path, sheet_name='Shuffled cohort', header=None).to_numpy()
@@ -81,8 +81,8 @@ def semi_supervised_plots(file_path):
             rJSD_sh[i] = np.mean(dist_sh)
         return rJSD_SS, rJSD_sh
 
-    def ROC_compare(dist0_positive, dist0_negative, dist1_positive, dist1_negative, threshold_span):
-        def ROC_data(dist_positive, dist_negative, threshold_span, bins_number=1000):
+    def ROC_compare(dist0_positive:np.array, dist0_negative:np.array, dist1_positive:np.array, dist1_negative:np.aray, threshold_span:float):
+        def ROC_data(dist_positive:np.array, dist_negative:np.array, threshold_span:float, bins_number:int=1000):
             fpr, tpr = [], []
             thresholds = np.arange(threshold_span[0], threshold_span[1],
                                    (threshold_span[1] - threshold_span[0]) / bins_number)
@@ -132,7 +132,7 @@ def supervised_plots(file_path):
     m = np.size(reference_cohort_A, 0)
     test_size = np.size(test_cohort_A, 0)
 
-    def calculate_network_impact_supervised(reference_cohort, test_samples):
+    def calculate_network_impact_supervised(reference_cohort:np.array, test_samples:np.array):
         DS, DW, theta = [], [], []
         for i in range(np.size(test_samples, 0)):
             test_set = np.vstack([reference_cohort, test_samples[i, :]])
@@ -142,7 +142,7 @@ def supervised_plots(file_path):
             theta.append(theta0)
         return DS, DW, theta
 
-    def calculate_rJSD_supervised(reference_cohort, test_samples):
+    def calculate_rJSD_supervised(reference_cohort:np.array, test_samples:np.array):
         rJSD = np.zeros(test_size)
         k = 0
         for j in range(test_size):
